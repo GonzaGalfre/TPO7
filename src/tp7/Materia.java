@@ -1,4 +1,4 @@
-package com.mycompany.tp7;
+package tp7;
 
 public class Materia {
     Integer idMateria;

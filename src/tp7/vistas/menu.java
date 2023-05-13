@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vistas;
+package tp7.vistas;
 
 /**
  *
  * @author gil_g
  */
-public class menu extends javax.swing.JInternalFrame {
+public class menu extends javax.swing.JFrame {
     
     //public static Directorio miDirectorio=new Directorio();
     

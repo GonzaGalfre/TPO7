@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vistas;
+package tp7.vistas;
 
 
 import javax.swing.JOptionPane;
-import com.mycompany.tp7.Materia;
+import tp7.Materia;
 
 /**
  *
