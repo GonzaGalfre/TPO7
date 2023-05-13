@@ -1,3 +1,4 @@
+import com.mycompany.tp7.Materia;
 import java.util.ArrayList;
 import java.util.List;
 

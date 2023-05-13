@@ -1,3 +1,5 @@
+package com.mycompany.tp7;
+
 public class Materia {
     Integer idMateria;
     String nombre;
