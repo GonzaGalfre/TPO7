@@ -1,18 +1,18 @@
 package tp7;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Alumno {
     Integer legajo;
     String apellido;
     String nombre;
-    List<Materia> materias;
+    Set<Materia> materias;
 
     public Alumno(Integer legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
-        materias = new ArrayList<>();
+        materias = new HashSet<>();
     }
 
     public Integer getLegajo() {
@@ -39,13 +39,15 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public void agregarMateria(Materia m) {
+    public boolean agregarMateria(Materia m) {
+        boolean agregado=false;
         if (!materias.contains(m)) {
             this.materias.add(m);
+            agregado=!agregado;
         } else {
-            System.out.printf("El alumno %s ya esta inscripto en la materia %s", this.nombre, m.getNombre());
+            agregado=agregado;
         }
-
+        return agregado;
     }
 
     public Integer cantidadMaterias() {
