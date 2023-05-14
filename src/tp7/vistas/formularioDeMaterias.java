@@ -44,7 +44,7 @@ public class formularioDeMaterias extends javax.swing.JInternalFrame {
         jBnuevo = new javax.swing.JButton();
         jBsalir = new javax.swing.JButton();
 
-        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPane1.setBackground(new java.awt.Color(240, 240, 240));
 
         jLabel1.setText("FORMULARIO DE MATERIAS");
 
@@ -68,8 +68,18 @@ public class formularioDeMaterias extends javax.swing.JInternalFrame {
         });
 
         jBnuevo.setText("Nuevo");
+        jBnuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBnuevoActionPerformed(evt);
+            }
+        });
 
         jBsalir.setText("Salir");
+        jBsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBsalirActionPerformed(evt);
+            }
+        });
 
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -174,6 +184,8 @@ public class formularioDeMaterias extends javax.swing.JInternalFrame {
         
         Materia materia = new Materia (idMateria,nombre,anio);
         
+        menu.colegio.agregarMateria(materia);
+        
         JOptionPane.showMessageDialog(this, "Materia agregada");
         
         } catch(Exception ex){
@@ -182,6 +194,16 @@ public class formularioDeMaterias extends javax.swing.JInternalFrame {
         
         
     }//GEN-LAST:event_jBguardarActionPerformed
+
+    private void jBnuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBnuevoActionPerformed
+        jTFcodigoDeMateria.setText("");
+        jTFnombreDeLaMateria.setText("");
+        jTFanioMateria.setText("");
+    }//GEN-LAST:event_jBnuevoActionPerformed
+
+    private void jBsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsalirActionPerformed
+        dispose();
+    }//GEN-LAST:event_jBsalirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

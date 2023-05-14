@@ -39,15 +39,15 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public boolean agregarMateria(Materia m) {
-        boolean agregado=false;
+public void agregarMateria(Materia m) throws Exception {
         if (!materias.contains(m)) {
             this.materias.add(m);
-            agregado=!agregado;
         } else {
-            agregado=agregado;
+            throw new Exception();
         }
-        return agregado;
+    }
+
+    public Alumno() {
     }
 
     public Integer cantidadMaterias() {

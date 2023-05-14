@@ -4,14 +4,16 @@
  * and open the template in the editor.
  */
 package tp7.vistas;
-
+//import tpo6.negocio.Directorio;
+import tp7.Colegio;
 /**
  *
  * @author gil_g
  */
 public class menu extends javax.swing.JFrame {
-    
-    //public static Directorio miDirectorio=new Directorio();
+public static Colegio colegio = new Colegio();   
+//public static Directorio miDirectorio=new Directorio();
+
     
 
     /**
@@ -36,6 +38,8 @@ public class menu extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMIagregarMateria = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
@@ -55,7 +59,7 @@ public class menu extends javax.swing.JFrame {
             .addGap(0, 261, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("File");
+        jMenu1.setText("Administración");
 
         jMIagregarMateria.setText("Agregar Materias");
         jMIagregarMateria.addActionListener(new java.awt.event.ActionListener() {
@@ -65,9 +69,30 @@ public class menu extends javax.swing.JFrame {
         });
         jMenu1.add(jMIagregarMateria);
 
+        jMenuItem3.setText("AgregarAlumno");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setText("Inscripcion");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Salir");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -94,6 +119,28 @@ public class menu extends javax.swing.JFrame {
         escritorio.add(vac);
         escritorio.moveToFront(vac);
     }//GEN-LAST:event_jMIagregarMateriaActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        escritorio.removeAll();
+        escritorio.repaint();
+        formAlum vac=new formAlum();
+        vac.setVisible(true);
+        escritorio.add(vac);
+        escritorio.moveToFront(vac);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormInsc vac=new FormInsc();
+        vac.setVisible(true);
+        escritorio.add(vac);
+        escritorio.moveToFront(vac);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -133,5 +180,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
 }
