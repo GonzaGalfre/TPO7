@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Colegio {
     
-    //private HashMap<String, Cliente> registro = new HashMap<String, Cliente>();
     private List <Materia> listMaterias=new ArrayList();
     private List <Alumno> listAlumnos=new ArrayList();
 
@@ -55,14 +54,14 @@ public class Colegio {
        }
        return result;
    }
-   public Alumno buscarAlumno(String alumno) {
-       Alumno result = new Alumno();
-       for(Alumno a : listAlumnos) {
-           if(a.getNombre().equals(alumno)){
-               result = a;
-               break;
-           }
-       }
-       return result;
-   }
+    public Alumno buscarAlumno(String alumno) {
+        Alumno result = new Alumno();
+        for(Alumno a : listAlumnos) {
+            if(a.getNombre().equals(alumno)){
+                result = a;
+                break;
+            }
+        }
+        return result;
+    }
 }

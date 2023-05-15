@@ -10,7 +10,7 @@ import tp7.Colegio;
  *
  * @author gil_g
  */
-public class menu extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame {
 public static Colegio colegio = new Colegio();   
 //public static Directorio miDirectorio=new Directorio();
 
@@ -19,7 +19,7 @@ public static Colegio colegio = new Colegio();
     /**
      * Creates new form menu
      */
-    public menu() {
+    public Menu() {
         initComponents();
     }
 
@@ -69,7 +69,7 @@ public static Colegio colegio = new Colegio();
         });
         jMenu1.add(jMIagregarMateria);
 
-        jMenuItem3.setText("AgregarAlumno");
+        jMenuItem3.setText("Agregar Alumnos");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -114,7 +114,7 @@ public static Colegio colegio = new Colegio();
     private void jMIagregarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIagregarMateriaActionPerformed
         escritorio.removeAll();
         escritorio.repaint();
-        formularioDeMaterias vac=new formularioDeMaterias();
+        FormularioMaterias vac=new FormularioMaterias();
         vac.setVisible(true);
         escritorio.add(vac);
         escritorio.moveToFront(vac);
@@ -123,7 +123,7 @@ public static Colegio colegio = new Colegio();
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         escritorio.removeAll();
         escritorio.repaint();
-        formAlum vac=new formAlum();
+        FormularioAlumnos vac=new FormularioAlumnos();
         vac.setVisible(true);
         escritorio.add(vac);
         escritorio.moveToFront(vac);
@@ -136,7 +136,7 @@ public static Colegio colegio = new Colegio();
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         escritorio.removeAll();
         escritorio.repaint();
-        FormInsc vac=new FormInsc();
+        FormularioInscripcion vac=new FormularioInscripcion();
         vac.setVisible(true);
         escritorio.add(vac);
         escritorio.moveToFront(vac);
@@ -156,8 +156,9 @@ public static Colegio colegio = new Colegio();
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
         
         //</editor-fold>
@@ -165,7 +166,7 @@ public static Colegio colegio = new Colegio();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new menu().setVisible(true);
+                new Menu().setVisible(true);
             }
         });
     }

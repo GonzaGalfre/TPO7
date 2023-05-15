@@ -13,12 +13,12 @@ import tp7.Materia;
  *
  * @author gil_g
  */
-public class formularioDeMaterias extends javax.swing.JInternalFrame {
+public class FormularioMaterias extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form formularioDeMaterias
      */
-    public formularioDeMaterias() {
+    public FormularioMaterias() {
         initComponents();
     }
 
@@ -184,7 +184,7 @@ public class formularioDeMaterias extends javax.swing.JInternalFrame {
         
         Materia materia = new Materia (idMateria,nombre,anio);
         
-        menu.colegio.agregarMateria(materia);
+        Menu.colegio.agregarMateria(materia);
         
         JOptionPane.showMessageDialog(this, "Materia agregada");
         

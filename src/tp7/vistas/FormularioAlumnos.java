@@ -13,12 +13,12 @@ import tp7.Materia;
  *
  * @author gil_g
  */
-public class formAlum extends javax.swing.JInternalFrame {
+public class FormularioAlumnos extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form formAlum
      */
-    public formAlum() {
+    public FormularioAlumnos() {
         initComponents();
     }
 
@@ -169,7 +169,7 @@ public class formAlum extends javax.swing.JInternalFrame {
         
         Alumno alumno = new Alumno (legajo, apellido , nombre);
         
-        menu.colegio.agregarAlumno(alumno);
+        Menu.colegio.agregarAlumno(alumno);
         
         JOptionPane.showMessageDialog(this, "Alumno agregado");
         

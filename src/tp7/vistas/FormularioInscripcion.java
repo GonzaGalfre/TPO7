@@ -14,18 +14,18 @@ import tp7.Materia;
  *
  * @author gil_g
  */
-public class FormInsc extends javax.swing.JInternalFrame {
+public class FormularioInscripcion extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form FormInsc
      */
-    public FormInsc() {
+    public FormularioInscripcion() {
         initComponents();
-    for(String nombre : menu.colegio.nombresAlumnos()){
+    for(String nombre : Menu.colegio.nombresAlumnos()){
        jComboBox2.addItem(nombre);
     }
     
-    for(String materias : menu.colegio.nombresMaterias()){
+    for(String materias : Menu.colegio.nombresMaterias()){
         jComboBox1.addItem(materias);
     }
  }
@@ -144,10 +144,10 @@ public class FormInsc extends javax.swing.JInternalFrame {
             String nombre = jComboBox2.getSelectedItem().toString();
             String materia = jComboBox1.getSelectedItem().toString();
             
-            Materia materiaBuscar = menu.colegio.buscarMateria(materia);
-            Alumno alumnoBuscar = menu.colegio.buscarAlumno(nombre);
+            Materia materiaBuscar = Menu.colegio.buscarMateria(materia);
+            Alumno alumnoBuscar = Menu.colegio.buscarAlumno(nombre);
             
-            menu.colegio.agregarMateriaAAlumno(alumnoBuscar, materiaBuscar);
+            Menu.colegio.agregarMateriaAAlumno(alumnoBuscar, materiaBuscar);
             
             JOptionPane.showMessageDialog(this, "Alumno agregado correctamente");
             
